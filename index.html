@@ -14,8 +14,9 @@
   <h2>HearLabs Gantt Chart – April 2025</h2>
   <div id="gantt"></div>
 
-  <script src="https://unpkg.com/frappe-gantt/dist/frappe-gantt.min.js"></script>
-  <script>
+<script src="https://cdn.jsdelivr.net/npm/frappe-gantt@0.6.1/dist/frappe-gantt.min.js" defer></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
     const tasks = [
       { id: "1", name: "I2C Bring-up", start: "2025-04-01", end: "2025-04-03", progress: 0, custom_class: "devang", details: "Devang & Hamza – Confirm ADV7623 I2C Communication" },
       { id: "2", name: "Register Init", start: "2025-04-03", end: "2025-04-05", progress: 0, custom_class: "devang", details: "Devang & Hamza – Implement ADV7623 Register Init & Reset Logic" },
@@ -35,6 +36,7 @@
       view_mode: 'Day',
       custom_popup_html: task => `<div class='details'><strong>${task.name}</strong><br>${task.details}</div>`
     });
-  </script>
+  });
+</script>
 </body>
 </html>
