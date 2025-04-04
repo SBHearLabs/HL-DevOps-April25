@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HearLabs Gantt Chart – April 2025</title>
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/frappe-gantt@0.6.1/dist/frappe-gantt.min.css" />
   <style>
     body { font-family: Arial, sans-serif; padding: 20px; }
@@ -18,9 +17,9 @@
   <div style="margin-top: 20px;">
     <strong>Legend:</strong>
     <ul>
-      <li style="color:#4e79a7">■ Devang</li>
       <li style="color:#af7aa1">■ Hamza</li>
-      <li style="color:#59a14f">■ Daniel</li>
+      <li style="color:#4e79a7">■ Devang</li>
+      <li style="color:#59a14f">■ Daniel & Matteo</li>
       <li style="color:#f28e2c">■ Andrew</li>
       <li style="color:#e15759">■ Steve + Team</li>
     </ul>
@@ -30,18 +29,18 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const tasks = [
-        { id: "1", name: "I2C Bring-up", start: "2025-04-01", end: "2025-04-03", progress: 0, details: "Devang & Hamza – Confirm ADV7623 I2C Communication", color: "#4e79a7" },
-        { id: "2", name: "Register Init", start: "2025-04-03", end: "2025-04-05", progress: 0, details: "Devang & Hamza – Implement ADV7623 Register Init & Reset Logic", color: "#4e79a7" },
-        { id: "3", name: "HDMI Pass", start: "2025-04-05", end: "2025-04-07", progress: 0, details: "Devang – Enable HDMI Passthrough & EDID Handling", color: "#4e79a7" },
-        { id: "4", name: "Audio Extract", start: "2025-04-07", end: "2025-04-10", progress: 0, details: "Devang – Extract Audio via I2S/SPDIF", color: "#4e79a7" },
-        { id: "5", name: "Audio Setup", start: "2025-04-10", end: "2025-04-13", progress: 0, details: "Daniel – Set Up ALSA or GStreamer Audio Capture", color: "#59a14f" },
-        { id: "6", name: "DSP Graph", start: "2025-04-13", end: "2025-04-18", progress: 0, details: "Daniel – Build Real-Time Audio Processing Graph (EQ, Leveling)", color: "#59a14f" },
-        { id: "7", name: "VocalClear EQ", start: "2025-04-18", end: "2025-04-23", progress: 0, details: "Daniel – Prototype VocalClear Dynamic EQ Inversion", color: "#59a14f" },
-        { id: "8", name: "Wi-Fi/BT Stack", start: "2025-04-10", end: "2025-04-14", progress: 0, details: "Hamza – Enable Wi-Fi/BT Comm Stack (Kernel + Services)", color: "#af7aa1" },
-        { id: "9", name: "API Layer", start: "2025-04-14", end: "2025-04-17", progress: 0, details: "Devang – Develop Embedded REST/gRPC API Layer", color: "#4e79a7" },
-        { id: "10", name: "App UI", start: "2025-04-17", end: "2025-04-22", progress: 0, details: "Andrew – Build App UI for Audio Control (EQ, Input Modes)", color: "#f28e2c" },
-        { id: "11", name: "App Connect", start: "2025-04-22", end: "2025-04-26", progress: 0, details: "Andrew – Connect App to Embedded API", color: "#f28e2c" },
-        { id: "12", name: "Integration", start: "2025-04-26", end: "2025-05-01", progress: 0, details: "Steve + Team – System Integration, Lip Sync & Audio Tuning", color: "#e15759" }
+        {id: "1", name: "I2C Bring-up", start: "2025-04-01", end: "2025-04-03", progress: 0, details: "Hamza – Confirm ADV7623 I2C Communication", color: "#af7aa1"},
+        {id: "2", name: "Register Init", start: "2025-04-03", end: "2025-04-05", progress: 0, details: "Hamza – Implement ADV7623 Register Init & Reset Logic", color: "#af7aa1"},
+        {id: "3", name: "HDMI Pass", start: "2025-04-05", end: "2025-04-07", progress: 0, details: "Hamza – Enable HDMI Passthrough & EDID Handling", color: "#af7aa1"},
+        {id: "4", name: "Audio Extract", start: "2025-04-07", end: "2025-04-10", progress: 0, details: "Hamza – Extract Audio via I2S/SPDIF", color: "#af7aa1"},
+        {id: "5", name: "Audio Setup", start: "2025-04-10", end: "2025-04-13", progress: 0, details: "Matteo – Set Up ALSA or GStreamer Audio Capture", color: "#59a14f"},
+        {id: "6", name: "DSP Graph", start: "2025-04-13", end: "2025-04-18", progress: 0, details: "Daniel & Matteo – Build Real-Time Audio Processing Graph (EQ, Leveling)", color: "#59a14f"},
+        {id: "7", name: "VocalClear EQ", start: "2025-04-18", end: "2025-04-23", progress: 0, details: "Daniel & Matteo – Prototype VocalClear Dynamic EQ Inversion", color: "#59a14f"},
+        {id: "8", name: "Wi-Fi/BT Stack", start: "2025-04-10", end: "2025-04-14", progress: 0, details: "Devang – Enable Wi-Fi/BT Comm Stack (Kernel + Services)", color: "#4e79a7"},
+        {id: "9", name: "API Layer", start: "2025-04-14", end: "2025-04-17", progress: 0, details: "Devang – Develop Embedded REST/gRPC API Layer", color: "#4e79a7"},
+        {id: "10", name: "App UI", start: "2025-04-17", end: "2025-04-22", progress: 0, details: "Andrew – Build App UI for Audio Control (EQ, Input Modes)", color: "#f28e2c"},
+        {id: "11", name: "App Connect", start: "2025-04-22", end: "2025-04-26", progress: 0, details: "Andrew – Connect App to Embedded API", color: "#f28e2c"},
+        {id: "12", name: "Integration", start: "2025-04-26", end: "2025-05-01", progress: 0, details: "Steve + Team – System Integration, Lip Sync & Audio Tuning", color: "#e15759"}
       ];
 
       const gantt = new Gantt("#gantt", tasks, {
@@ -49,13 +48,12 @@
         custom_popup_html: task => `<div class='details'><strong>${task.name}</strong><br>${task.details}</div>`
       });
 
-      // Force-set fill colors on bars
       setTimeout(() => {
         tasks.forEach(task => {
           const bar = document.querySelector(`.bar-wrapper[data-id='${task.id}'] .bar`);
           if (bar) bar.style.fill = task.color;
         });
-      }, 100); // wait for Gantt to render
+      }, 100);
     });
   </script>
 </body>
